@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>991</width>
+    <height>991</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>All Privacy Protected</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(250, 255, 255)</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="startButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>object detection start</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{ color: black;border-style: outset;border-width: 2px;border-radius: 10px;border-color:  black;font: 14px;min-width: 5em;padding: 2px;}
+
+
+QPushButton:disabled{ color: rgb(177, 175, 179);border-style: solid;border-width: 2px;border-radius: 10px;border-color: rgb(177, 175, 179);font: 14px;min-width: 5em;padding: 2px;}
+
+
+ QPushButton:pressed{ background-color: rgb(35, 102, 255); color: white;border-style: outset;border-width: 2px;border-radius: 10px;border-color: beige;font: 14px;min-width: 5em;padding: 1px;}</string>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="maskButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>20</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>start masking</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{ color: black;border-style: outset;border-width: 2px;border-radius: 10px;border-color: black;font: 14px;min-width: 5em;padding: 2px;}
+
+
+QPushButton:disabled{ color: rgb(177, 175, 179);border-style: solid;border-width: 2px;border-radius: 10px;border-color: rgb(177, 175, 179);font: 14px;min-width: 5em;padding: 2px;}
+
+
+ QPushButton:pressed{ background-color: rgb(35, 102, 255); color: white;border-style: outset;border-width: 2px;border-radius: 10px;border-color: beige;font: 14px;min-width: 5em;padding: 1px;}</string>
+    </property>
+    <property name="text">
+     <string>Masking</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>600</y>
+      <width>93</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+border-style: outset;
+border-width: 2px;
+     border-radius: 10px;
+     border-color: black;
+     font: 14px;
+     min-width: 5em;
+     padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>Play</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pauseButton">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>600</y>
+      <width>93</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+border-style: outset;
+border-width: 2px;
+     border-radius: 10px;
+     border-color: black;
+     font: 14px;
+     min-width: 5em;
+     padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>Pause</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="StopButton">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>600</y>
+      <width>93</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+border-style: outset;
+border-width: 2px;
+     border-radius: 10px;
+     border-color: black;
+     font: 14px;
+     min-width: 5em;
+     padding: 2px;</string>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="barWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>550</y>
+      <width>641</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>70</y>
+      <width>231</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>229</width>
+       <height>519</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="croparea">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>650</y>
+      <width>891</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="cropAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>889</width>
+       <height>289</height>
+      </rect>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::PreventContextMenu</enum>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>891</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color : black; font-size : 15pt;</string>
+      </property>
+      <property name="text">
+       <string>No Images</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>651</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="playerlayout"/>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>20</y>
+      <width>15</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="toolTip">
+     <string>You can change intensity of masking</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/images/icon/info.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>40</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size : 14pt; color : black;</string>
+    </property>
+    <property name="text">
+     <string>Template matching</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>40</y>
+      <width>15</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="toolTip">
+     <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Put specific images you want to disable masking&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/images/icon/info.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>619</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size : 14pt; color : black;</string>
+    </property>
+    <property name="text">
+     <string>Detection Images</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>620</y>
+      <width>15</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="toolTip">
+     <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click areas where blur is unnecessary&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/images/icon/info.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>30</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">color : black; font-size : 14pt;
+background : transparent;
+</string>
+       </property>
+       <property name="text">
+        <string>Intensity</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="mat_value">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Highlight">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>0</red>
+             <green>170</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Highlight">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>0</red>
+             <green>170</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Button">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>250</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </colorrole>
+          <colorrole role="Highlight">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>0</red>
+             <green>120</green>
+             <blue>215</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>60</number>
+       </property>
+       <property name="value">
+        <number>30</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="mat_value_2">
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color : black; font-size : 11pt; </string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>60</number>
+       </property>
+       <property name="value">
+        <number>30</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>startButton</zorder>
+   <zorder>maskButton</zorder>
+   <zorder>playButton</zorder>
+   <zorder>pauseButton</zorder>
+   <zorder>StopButton</zorder>
+   <zorder>barWidget</zorder>
+   <zorder>scrollArea</zorder>
+   <zorder>croparea</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_7</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_5</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>991</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuTool">
+    <property name="title">
+     <string>Tool</string>
+    </property>
+    <addaction name="actionDrag"/>
+    <addaction name="actionZoom_in"/>
+    <addaction name="actionZoom_out"/>
+   </widget>
+   <widget class="QMenu" name="menuHElp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionUI_Tour"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTool"/>
+   <addaction name="menuHElp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: solid;   margin-left:10px; </string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="separator"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionDrag"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom_in"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom_out"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icon/open.png</normaloff>:/images/icon/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a File</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icon/arrow.png</normaloff>:/images/icon/arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save a file</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionDrag">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icon/selection.png</normaloff>:/images/icon/selection.png</iconset>
+   </property>
+   <property name="text">
+    <string>Drag</string>
+   </property>
+   <property name="toolTip">
+    <string>Drag</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icon/zoom-in.png</normaloff>:/images/icon/zoom-in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom-in</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom-in</string>
+   </property>
+  </action>
+  <action name="actionZoom_out">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icon/zoom-out.png</normaloff>:/images/icon/zoom-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom-out</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom-out</string>
+   </property>
+  </action>
+  <action name="actionUI_Tour">
+   <property name="text">
+    <string>UI Tour</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>mat_value</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mat_value_2</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>648</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>664</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mat_value_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mat_value</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>642</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

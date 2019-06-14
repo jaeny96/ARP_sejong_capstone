@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icon/open.png</file>
+        <file>icon/selection.png</file>
+        <file>icon/zoom-in.png</file>
+        <file>icon/zoom-out.png</file>
+        <file>icon/save-disk.png</file>
+        <file>icon/music-player-play.png</file>
+        <file>icon/pause-button.png</file>
+        <file>icon/stop.png</file>
+        <file>icon/add.png</file>
+        <file>icon/arrow.png</file>
+        <file>icon/info.png</file>
+    </qresource>
+    <qresource prefix="/python">
+        <file>processing_video.py</file>
+        <file>masking.py</file>
+        <file>manual_blur.py</file>
+    </qresource>
+</RCC>
